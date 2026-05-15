@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{LANG}}">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{NAME}} — CV</title>
+<title>Easton Michura — CV</title>
 <style>
   @font-face {
     font-family: 'Space Grotesk';
@@ -11,17 +11,6 @@
     font-weight: 300 700;
     font-style: normal;
     font-display: swap;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  
-
-  @font-face {
-    font-family: 'Space Grotesk';
-    src: url('./fonts/space-grotesk-latin-ext.woff2') format('woff2');
-    font-weight: 300 700;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
   }
 
   @font-face {
@@ -30,16 +19,6 @@
     font-weight: 100 1000;
     font-style: normal;
     font-display: swap;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-  @font-face {
-    font-family: 'DM Sans';
-    src: url('./fonts/dm-sans-latin-ext.woff2') format('woff2');
-    font-weight: 100 1000;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
   }
 
   * {
@@ -65,12 +44,11 @@
 
   .page {
     width: 100%;
-    max-width: {{PAGE_WIDTH}};
+    max-width: 210mm;
     margin: 0 auto;
-    padding: 2px 0;
+    padding: 20px;
   }
 
-  /* === HEADER === */
   .header {
     margin-bottom: 20px;
   }
@@ -111,7 +89,6 @@
     color: #ccc;
   }
 
-  /* === SECTIONS === */
   .section {
     margin-bottom: 18px;
   }
@@ -129,19 +106,12 @@
     line-height: 1.2;
   }
 
-  /* === PROFESSIONAL SUMMARY === */
   .summary-text {
     font-size: 11px;
     line-height: 1.7;
     color: #2f2f2f;
   }
 
-  /* Links must never break across lines */
-  a {
-    white-space: nowrap;
-  }
-
-  /* === CORE COMPETENCIES === */
   .competencies-grid {
     display: flex;
     flex-wrap: wrap;
@@ -159,7 +129,6 @@
     border: 1px solid hsl(187, 40%, 88%);
   }
 
-  /* === WORK EXPERIENCE === */
   .job {
     margin-bottom: 14px;
   }
@@ -192,11 +161,6 @@
     margin-bottom: 6px;
   }
 
-  .job-location {
-    font-size: 10px;
-    color: #888;
-  }
-
   .job ul {
     padding-left: 18px;
     margin-top: 6px;
@@ -209,11 +173,6 @@
     margin-bottom: 4px;
   }
 
-  .job li strong {
-    font-weight: 600;
-  }
-
-  /* === PROJECTS === */
   .project {
     margin-bottom: 12px;
   }
@@ -225,16 +184,6 @@
     color: hsl(270, 70%, 45%);
   }
 
-  .project-badge {
-    font-size: 9px;
-    font-weight: 500;
-    color: hsl(187, 74%, 32%);
-    background: hsl(187, 40%, 95%);
-    padding: 1px 6px;
-    border-radius: 2px;
-    margin-left: 6px;
-  }
-
   .project-desc {
     font-size: 10.5px;
     color: #444;
@@ -242,13 +191,6 @@
     line-height: 1.55;
   }
 
-  .project-tech {
-    font-size: 9.5px;
-    color: #888;
-    margin-top: 3px;
-  }
-
-  /* === EDUCATION === */
   .edu-item {
     margin-bottom: 8px;
   }
@@ -271,20 +213,6 @@
     font-weight: 500;
   }
 
-  .edu-year {
-    font-size: 10px;
-    color: #777;
-    white-space: nowrap;
-  }
-
-  .edu-desc {
-    font-size: 10px;
-    color: #666;
-    margin-top: 2px;
-    line-height: 1.5;
-  }
-
-  /* === CERTIFICATIONS === */
   .cert-item {
     display: flex;
     justify-content: space-between;
@@ -293,32 +221,10 @@
     margin-bottom: 6px;
   }
 
-  .cert-title {
-    font-size: 10.5px;
-    font-weight: 500;
-    color: #333;
-  }
-
-  .cert-org {
-    color: hsl(270, 70%, 45%);
-  }
-
-  .cert-year {
-    font-size: 10px;
-    color: #777;
-    white-space: nowrap;
-  }
-
-  /* === SKILLS === */
   .skills-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 6px 14px;
-  }
-
-  .skill-item {
-    font-size: 10.5px;
-    color: #444;
   }
 
   .skill-category {
@@ -327,93 +233,116 @@
     font-size: 10.5px;
   }
 
-  /* === PRINT === */
   @media print {
-    body {
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-
     .page {
       padding: 0;
     }
   }
 
-  /* === PAGE BREAK CONTROL === */
-  .avoid-break,
-  .job,
-  .project,
-  .edu-item,
-  .cert-item {
+  .avoid-break {
     break-inside: avoid;
-    page-break-inside: avoid;
   }
 </style>
 </head>
 <body>
 <div class="page">
-
-  <!-- HEADER -->
   <div class="header avoid-break">
-    <h1>{{NAME}}</h1>
+    <h1>Easton Michura</h1>
     <div class="header-gradient"></div>
     <div class="contact-row">
-      <span>{{PHONE}}</span>
+      <span>+254 754 376 221</span>
       <span class="separator">|</span>
-      <span>{{EMAIL}}</span>
+      <span>eh.hanseaston@gmail.com</span>
       <span class="separator">|</span>
-      <a href="{{LINKEDIN_URL}}">{{LINKEDIN_DISPLAY}}</a>
+      <a href="https://www.linkedin.com/in/easton-michura">linkedin.com/in/easton-michura</a>
       <span class="separator">|</span>
-      <a href="{{PORTFOLIO_URL}}">{{PORTFOLIO_DISPLAY}}</a>
+      <a href="https://eastonhans.vercel.app/">eastonhans.vercel.app</a>
       <span class="separator">|</span>
-      <span>{{LOCATION}}</span>
+      <span>Nairobi, Kenya</span>
     </div>
   </div>
 
-  <!-- PROFESSIONAL SUMMARY -->
   <div class="section avoid-break">
-    <div class="section-title">{{SECTION_SUMMARY}}</div>
-    <div class="summary-text">{{SUMMARY_TEXT}}</div>
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">Results-driven AI-Native Frontend Developer based in Nairobi, specializing in building responsive, high-performance React applications. Expert at bridging natural language prompts with production-grade code using tools like Lovable.dev and Claude Code. Proven track record in optimizing web performance, integrating complex JSON APIs, and delivering user-centered digital experiences.</div>
   </div>
 
-  <!-- CORE COMPETENCIES -->
   <div class="section">
-    <div class="section-title">{{SECTION_COMPETENCIES}}</div>
+    <div class="section-title">Core Competencies</div>
     <div class="competencies-grid">
-      {{COMPETENCIES}}
+      <span class="competency-tag">React & Next.js</span>
+      <span class="competency-tag">AI-Native Development</span>
+      <span class="competency-tag">Tailwind CSS</span>
+      <span class="competency-tag">JSON/API Integration</span>
+      <span class="competency-tag">State Management (Hooks/Zustand)</span>
+      <span class="competency-tag">Responsive UI/UX</span>
+      <span class="competency-tag">Prompt Engineering</span>
+      <span class="competency-tag">TypeScript</span>
     </div>
   </div>
 
-  <!-- WORK EXPERIENCE -->
   <div class="section">
-    <div class="section-title">{{SECTION_EXPERIENCE}}</div>
-    {{EXPERIENCE}}
+    <div class="section-title">Work Experience</div>
+    <div class="job avoid-break">
+      <div class="job-header">
+        <span class="job-company">Oracom Group Limited</span>
+        <span class="job-period">May 2024 – Aug 2024</span>
+      </div>
+      <div class="job-role">Junior Web & Data Systems Intern | Nairobi, Kenya</div>
+      <ul>
+        <li>Developed and maintained responsive React-based front-end components and back-end logic.</li>
+        <li>Integrated dynamic data from JSON APIs to support real-time website functionality and internal tools.</li>
+        <li>Optimized UI components with Tailwind CSS for speed, mobile responsiveness, and usability.</li>
+        <li>Collaborated with developers and non-technical stakeholders to align AI-native features with business goals.</li>
+        <li>Cleaned and structured data to support reporting, analytics, and operational decision-making.</li>
+      </ul>
+    </div>
+    <div class="job avoid-break">
+      <div class="job-header">
+        <span class="job-company">University of Nairobi</span>
+        <span class="job-period">May 2023 – Aug 2023</span>
+      </div>
+      <div class="job-role">Software Developer | Nairobi, Kenya</div>
+      <ul>
+        <li>Built a full-stack web application integrating machine learning models for real-time, data-backed insights.</li>
+        <li>Implemented modular, testable code in Python (Flask) and React, following best software development practices.</li>
+        <li>Designed user-centered interfaces focused on clarity, accessibility, and seamless navigation.</li>
+        <li>Documented system architecture and deployment processes to support long-term maintainability.</li>
+      </ul>
+    </div>
   </div>
 
-  <!-- PROJECTS -->
   <div class="section avoid-break">
-    <div class="section-title">{{SECTION_PROJECTS}}</div>
-    {{PROJECTS}}
+    <div class="section-title">Projects</div>
+    <div class="project">
+      <span class="project-title">Color Clock (React + AI)</span>
+      <div class="project-desc">Real-time HSL color mapping using React Hooks and custom state logic. Developed using AI-native workflows for rapid prototyping and refinement.</div>
+    </div>
+    <div class="project">
+      <span class="project-title">ML Weather Pipeline</span>
+      <div class="project-desc">Machine Learning pipeline integrating weather data into a web-based visualization, built with Python and React.</div>
+    </div>
   </div>
 
-  <!-- EDUCATION -->
   <div class="section avoid-break">
-    <div class="section-title">{{SECTION_EDUCATION}}</div>
-    {{EDUCATION}}
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <span class="edu-title">B.Sc. Computer Science</span>
+        <span class="edu-year">Sep 2021 – Oct 2025</span>
+      </div>
+      <div class="edu-org">Catholic University of Eastern Africa (CUEA)</div>
+    </div>
   </div>
 
-  <!-- CERTIFICATIONS -->
   <div class="section avoid-break">
-    <div class="section-title">{{SECTION_CERTIFICATIONS}}</div>
-    {{CERTIFICATIONS}}
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-item"><span class="skill-category">Frontend:</span> React, Next.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Responsive Design.</div>
+      <div class="skill-item"><span class="skill-category">Backend & DB:</span> Python (Flask), Node.js, SQL (PostgreSQL, MySQL).</div>
+      <div class="skill-item"><span class="skill-category">Tools:</span> Lovable.dev, Git, GitHub, VS Code, Google Cloud.</div>
+    </div>
   </div>
-
-  <!-- SKILLS -->
-  <div class="section avoid-break">
-    <div class="section-title">{{SECTION_SKILLS}}</div>
-    {{SKILLS}}
-  </div>
-
 </div>
 </body>
 </html>
