@@ -51,7 +51,7 @@ narrative:
 compensation:
   target_range: "Ksh.10,000 - 150,000"     # Your target total comp
   currency: "Ksh"                    # Currency code (e.g., USD, EUR, Ksh)
-  minimum: "Ksh.0"               # Walk-away number
+  minimum: "Ksh.10,000"               # Walk-away number
   location_flexibility: "Remote preferred, 1 week/month on-site possible"
 
 location:
